@@ -25,6 +25,7 @@ void main() async {
   ));
 }
 
+
 String getBaseUrl() {
   if (kIsWeb) return 'http://localhost:8000';
   if (Platform.isAndroid) return 'http://10.0.2.2:8000';
@@ -35,8 +36,10 @@ String getBaseUrl() {
 class MyApp extends StatelessWidget {
   final Widget initialScreen;
 
+  
   const MyApp({super.key, required this.initialScreen});
 
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -57,7 +60,7 @@ class MyApp extends StatelessWidget {
         '/userhome': (context) => const UserHomePage(),
         '/admin': (context) => const AdminDashboardPage(),
         '/members': (context) => const ClubMembersPage(),
-        '/manage_events': (context) => const ManageEventsPage(), // ✅ New route
+        '/manage_events': (context) => const ManageEventsPage(), 
       },
     );
   }
